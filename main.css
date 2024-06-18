@@ -965,7 +965,7 @@ section,
 
 .stats .stats-item span {
   font-size: 48px;
-  display: block;
+  display: inline;
   color: var(--default-color);
   font-weight: 700;
 }
