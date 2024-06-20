@@ -965,7 +965,7 @@ section,
 
 .stats .stats-item span {
   font-size: 48px;
-  display: block;
+  display: inline;
   color: var(--default-color);
   font-weight: 700;
 }
@@ -1836,6 +1836,10 @@ font-size:xx-large;
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact .content .row .col-lg-6 .row {
+  display: flex;
+  
+}
 .contact .info-item {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
