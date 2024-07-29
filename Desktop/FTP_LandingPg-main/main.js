@@ -15,11 +15,24 @@
     function toggleScrolled() {
       const selectBody = document.querySelector('body');
       const selectHeader = document.querySelector('#header');
-      if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-      window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+      const instiLogo = document.querySelector('#insti_logo');
+    
+      if (!selectHeader.classList.contains('scroll-up-sticky') && 
+          !selectHeader.classList.contains('sticky-top') && 
+          !selectHeader.classList.contains('fixed-top')) return;
+    
+      if (window.scrollY > 100) {
+        selectBody.classList.add('scrolled');
+        instiLogo.src = 'insti_logo.png'; // Change to the scrolled logo
+      } else {
+        selectBody.classList.remove('scrolled');
+        instiLogo.src = 'insti_logo_white.png'; // Revert to the default logo
+      }
     }
-  
-    document.addEventListener('scroll', toggleScrolled);
+    
+    // Add event listener to window scroll event
+    window.addEventListener('scroll', toggleScrolled);
+    
     window.addEventListener('load', toggleScrolled);
   
     /**
